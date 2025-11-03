@@ -26,15 +26,17 @@ const config: HardhatUserConfig = {
       type: "edr-simulated",
       chainType: "l1",
     },
-    hardhatOp: {
-      type: "edr-simulated",
-      chainType: "op",
-    },
-    sepolia: {
+    avalanche: {
       type: "http",
       chainType: "l1",
-      url: configVariable("SEPOLIA_RPC_URL"),
-      accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
+      url: configVariable("AVALANCHE_RPC_URL"),
+      accounts: [configVariable("AVALANCHE_PRIVATE_KEY")],
+    },
+    avalancheFuji: {
+      type: "http",
+      chainType: "l1",
+      url: configVariable("AVALANCHE_FUJI_RPC_URL"),
+      accounts: [configVariable("AVALANCHE_FUJI_PRIVATE_KEY")],
     },
   },
 };
