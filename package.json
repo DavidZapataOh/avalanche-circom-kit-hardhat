@@ -2,12 +2,25 @@
   "name": "avalanche-circom-kit-hardhat",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "circuits:compile": "tsx scripts/compile-circuits.ts",
+    "circuits:compile:prod": "tsx scripts/compile-circuits.ts --prod",
+    "circuits:verifiers": "tsx scripts/generate-verifiers.ts",
+    "circuits:clean": "tsx scripts/clean-circuits.ts",
+    "circuits:build": "pnpm circuits:compile && pnpm circuits:verifiers",
+    "circuits:build:prod": "pnpm circuits:compile:prod && pnpm circuits:verifiers",
+    "test": "hardhat test",
+    "test:circuits": "hardhat test test/multiplier2.test.ts"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-ignition": "^3.0.0",
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
     "@types/node": "^22.8.5",
+    "circom2": "^0.2.22",
     "forge-std": "github:foundry-rs/forge-std#v1.9.4",
     "hardhat": "^3.0.10",
+    "snarkjs": "^0.7.5",
+    "tsx": "^4.20.6",
     "typescript": "~5.8.0",
     "viem": "^2.30.0"
   }

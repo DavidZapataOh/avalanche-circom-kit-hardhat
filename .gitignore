@@ -18,3 +18,9 @@
 
 # Hardhat coverage reports
 /coverage
+
+# Circom build artifacts
+/circuits/build
+
+# Generated verifiers
+/contracts/verifiers
