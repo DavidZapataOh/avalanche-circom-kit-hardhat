@@ -1,5 +1,7 @@
 # Avalanche Circom Kit - Hardhat 3 Template
 
+![Banner](images/banner.png)
+
 A Hardhat 3 template for building zero-knowledge proof (ZK) applications using Circom circuits on Avalanche. This template includes automated circuit compilation, Solidity verifier generation, and seamless integration with Hardhat's testing framework.
 
 ## Features
@@ -45,7 +47,6 @@ pnpm install
 │   └── clean-circuits.ts        # Clean build artifacts
 ├── test/                  # Test files
 │   ├── multiplier2.test.ts      # Circuit tests
-│   └── Counter.ts               # Contract tests
 └── utils/                 # Utility classes
     └── Circuit.ts         # Circuit helper class
 ```
@@ -180,19 +181,6 @@ npx hardhat keystore set AVALANCHE_FUJI_RPC_URL
 
 ### Deploy Contracts
 
-#### Deploy Counter Contract
-
-```bash
-# Deploy to local network (in-process Hardhat Network)
-pnpm hardhat ignition deploy ignition/modules/Counter.ts
-
-# Deploy to Fuji testnet
-pnpm hardhat ignition deploy --network avalancheFuji ignition/modules/Counter.ts
-
-# Deploy to Avalanche mainnet
-pnpm hardhat ignition deploy --network avalanche ignition/modules/Counter.ts
-```
-
 #### Deploy Multiplier Contract with Verifier
 
 The Multiplier module deploys both the verifier and the Multiplier contract:
@@ -325,8 +313,6 @@ This template works seamlessly across:
 - **Windows**: PowerShell/CMD
 - **Linux**: bash/sh
 - **macOS**: bash/zsh (Intel and Apple Silicon)
-
-The scripts automatically detect your platform and use the appropriate executables and shells.
 
 ## Troubleshooting
 
