@@ -1,8 +1,8 @@
-# Avalanche Circom Kit - Hardhat 3 Template
+# Avalanche Circom Kit - Hardhat
 
 ![Banner](images/banner.png)
 
-A Hardhat 3 template for building zero-knowledge proof (ZK) applications using Circom circuits on Avalanche. This template includes automated circuit compilation, Solidity verifier generation, and seamless integration with Hardhat's testing framework.
+A Hardhat template for building zero-knowledge proof (ZK) applications using Circom circuits on Avalanche. This template includes automated circuit compilation, Solidity verifier generation, and seamless integration with Hardhat's testing framework.
 
 ## Features
 
